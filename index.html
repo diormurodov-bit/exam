@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#3978e8">
+    <title>Frontend Final Exam</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <a href="#" class="logo">FRONTEND<span>EXAM</span></a>
+        <div class="header-label">FINAL EXAMINATION</div>
+    </header>
+
+    <main class="container">
+
+        <!-- START SCREEN -->
+        <section class="intro card" id="startScreen">
+            <div class="eyebrow">FINAL EXAMINATION</div>
+            <h1>Frontend Development Test</h1>
+            <p class="description">
+                Проверь свои знания HTML, CSS, JavaScript, Git,
+                API, Figma и других технологий.
+            </p>
+
+            <div class="stats">
+                <div class="stat">
+                    <strong>64</strong>
+                    <span>Вопроса</span>
+                </div>
+                <div class="stat">
+                    <strong>ABCD</strong>
+                    <span>Один ответ</span>
+                </div>
+                <div class="stat">
+                    <strong>70%</strong>
+                    <span>Проходной балл</span>
+                </div>
+            </div>
+
+            <button class="primary-btn" id="startBtn">
+                Начать экзамен →
+            </button>
+        </section>
+
+        <!-- EXAM SCREEN -->
+        <section class="exam card hidden" id="examScreen">
+
+            <div class="exam-top">
+                <span id="questionCounter">Вопрос 1 из 64</span>
+                <span id="progressPercent">0%</span>
+            </div>
+
+            <div class="progress">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+
+            <div class="question-number" id="questionNumber">
+                QUESTION 01
+            </div>
+
+            <h2 id="questionText"></h2>
+
+            <div class="answers" id="answers"></div>
+
+            <div class="exam-footer">
+                <button class="secondary-btn" id="prevBtn">
+                    ← Назад
+                </button>
+
+                <span id="answerStatus">Выбери один ответ</span>
+
+                <button class="primary-btn" id="nextBtn">
+                    Далее →
+                </button>
+            </div>
+
+            <div class="question-navigation" id="questionNavigation"></div>
+
+        </section>
+
+        <!-- RESULT SCREEN -->
+        <section class="result card hidden" id="resultScreen">
+
+            <div class="eyebrow">EXAMINATION RESULTS</div>
+
+            <h1 id="resultTitle">Результат экзамена</h1>
+
+            <div class="score-circle">
+                <strong id="scorePercent">0%</strong>
+                <span>YOUR SCORE</span>
+            </div>
+
+            <div id="resultStatus" class="result-status"></div>
+
+            <div class="result-stats">
+                <div class="result-stat">
+                    <strong id="correctCount">0</strong>
+                    <span>Правильных</span>
+                </div>
+
+                <div class="result-stat">
+                    <strong id="wrongCount">0</strong>
+                    <span>Ошибок</span>
+                </div>
+
+                <div class="result-stat">
+                    <strong id="totalCount">64</strong>
+                    <span>Всего</span>
+                </div>
+            </div>
+
+            <button class="primary-btn" id="restartBtn">
+                Пройти заново
+            </button>
+
+            <div class="review-section">
+                <h2>Разбор ответов</h2>
+                <div id="reviewList"></div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        Frontend Final Examination · 2026
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
